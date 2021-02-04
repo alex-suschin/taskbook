@@ -1,0 +1,22 @@
+{
+    "name": "gulp-gen",
+    "description": "for start project gen SAS",
+    "main": "index.js",
+    "authors": [
+        "alex_ssuschin"
+    ],
+    "license": "ISC",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "bower_components/",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "bootstrap": "v4.0.0-beta"
+    }
+}
