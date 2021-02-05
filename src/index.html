@@ -17,7 +17,7 @@
                 </ul>
                 <div class="quest-setting">
                     <div class="quest-setting-box">
-                        <form action="/" method="POST" class="quest-setting-form">
+                        <form action="/" id="my-awesome-dropzone" class="quest-setting-form">
                             <div class="form-item">
                                 <label for="name-quest">Название:</label>
                                 <input id="name-quest" type="text" value="Внесение изменений в текущий вид посадочной страницы сайта vw-ring.ru">
@@ -36,6 +36,52 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-item">
+                                <label for="desc-quest">Описание:</label>
+                                <textarea name="desc-quest" id="desc-quest">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                            </div>
+                            <div class="form-item form-item-small">
+                                <div class="input-box">
+                                    <label for="link-quest">Ссылка на ресурс:</label>
+                                    <input id="link-quest" type="text" value="https://vw-ring.ru/models/">
+                                </div>
+                                <a href="javascript:void(0);" class="btn-plus"></a>
+                            </div>
+                            <div class="form-item form-item-small">
+                                <div class="input-box">
+                                    <label for="select-project">Проект:</label>
+                                    <select name="select-project">
+                                        <option value="VW Ring">VW Ring</option>
+                                        <option value="Discovery">Discovery</option>
+                                        <option value="Drumataca">Drumataca</option>
+                                        <option value="First_Klass">First_Klass</option>
+                                        <option value="Subaru">Subaru</option>
+                                        <option value="Suzuki">Suzuki</option>
+                                    </select>
+                                </div>
+                                <a href="javascript:void(0);" class="btn-plus"></a>
+                            </div>
+                            <div class="form-item form-item-small">
+                                <div class="input-box">
+                                    <label for="select-manager">Исполнитель:</label>
+                                    <select name="select-manager">
+                                        <option value="Jon Doe">Jon Doe</option>
+                                        <option value="Sophie Doe">Sophie Doe</option>
+                                        <option value="Hey Joe">Hey Joe</option>
+                                        <option value="Denzel Washington">Denzel Washington</option>
+                                        <option value="User Name">User Name</option>
+                                        <option value="Stew Doe">Stew Doe</option>
+                                    </select>
+                                </div>
+                                <a href="javascript:void(0);" class="btn-plus"></a>
+                            </div>
+                            <div class="form-item">
+                                <label for="">Прикрепить файлы:</label>
+                                <div id="forQueue" class="dropzone">
+                                    <input type="file" multiple="true" id="uploadFiles_dz" />
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-fiol">Создать задачу</button>
                         </form>
                     </div>
                     <div class="quest-setting-aside">
