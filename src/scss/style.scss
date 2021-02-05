@@ -410,9 +410,164 @@ select {
     }
 }
 
+.main-wrap-box {
+    min-height: calc(100vh - 102px);
+    padding: 21px 0 0 45px;
+    background: #FAFAFA;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    li {
+        position: relative;
+        margin-right: 34px;
+    }
+    li::after {
+        content: '/';
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        color: #858585;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: -19px;
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+    li:last-child a {
+        color: #4F5DD9;
+    }
+    li:last-child::after {
+        content: none;
+    }
+}
+
+a {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    color: #858585;
+}
+
+.quest-setting {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #9B9B9B;
+    margin-bottom: 9px;
+}
+
+.form-item {
+    margin-bottom: 28px;
+    input {
+        background: #FAFAFA;
+        border-radius: 6px;
+        padding: 0 20px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: #000000;
+        height: 38px;
+        margin-bottom: 0;
+    }
+}
+
+.quest-setting-box {
+    padding: 50px 90px 0 50px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    width: 75.334%;
+}
+
+.form-item-date {
+    position: relative;
+    max-width: 272px;
+    width: 100%;
+}
+
+.form-item-date::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 17px;
+    top: 39px;
+    width: 7px;
+    height: 4px;
+    background: url(../img/arr-date.svg) no-repeat center;
+}
+
+.radio-label {
+    position: relative;
+    cursor: pointer;
+    input {
+        display: none;
+        opacity: 0;
+    }
+    b {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 21px;
+        height: 21px;
+        border: 1px solid #CDCDCD;
+        box-sizing: border-box;
+        border-radius: 6px;
+        transition: all .1s linear;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+        -o-transition: all .1s linear;
+    }
+    input:checked+b {
+        background-color: #4F5DD9;
+        box-shadow: 0px 3px 7px rgba(79, 93, 217, 0.29);
+        border-radius: 6px;
+        border-color: #4F5DD9;
+        background-image: url(../img/radio-ico.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.form-item-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority {
+    max-width: 337px;
+    width: 100%;
+    .label-name {
+        width: 100%;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+        padding-left: 0;
+        border-bottom: 1px solid #EBEBEB;
+    }
+    label {
+        padding: 0 0 0 31px;
+    }
+}
+
+.priority-items {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* 
-    M O B I L E
+M O B I L E
 */
 
 @media screen and (max-width: 1200px) {

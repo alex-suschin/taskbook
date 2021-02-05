@@ -13,6 +13,13 @@ $(function() {
     });
 
 
+    $('#datepicker').datepicker({
+        showWeek: true,
+        firstDay: 1,
+        minDate: new Date()
+    });
+
+
 });
 
 $(window).on('load resize scroll', function() {

@@ -372,6 +372,7 @@ gulp.task('watch_html', () => {
     gulp.watch('src/**/*.scss', gulp.parallel('libs_styles'));
     gulp.watch('src/**/*.html', gulp.parallel('html'));
     gulp.watch('src/**/*.js', gulp.parallel('dev_js'));
+    gulp.watch('src/**/*.js', gulp.parallel('libs_js'));
     gulp.watch('src/**/*.json', gulp.parallel('json', 'html'));
     gulp.watch('src/img/**/*.*', gulp.parallel('img'));
     gulp.watch('src/svg/css/**/*.svg', gulp.parallel('svg2css'));
