@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Taskbook', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/aside.html')
+
+        <div class="main-wrap">
+            @@include('components/page/main-wrap-top.html')
+            <div class="main-wrap-box">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Задачи</a></li>
+                    <li><a href="#">Текущие задачи</a></li>
+                    <li><a href="#">Задача</a></li>
+                </ul>
+
+                <div class="quest-open">
+                    <div class="quest-open-box">
+                        <div class="quest-open-box-top">
+                            <div class="quest-num">#873474</div>
+                            <div class="quest-title">Редизайн посадочной страницы</div>
+                            <div class="quest-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            <div class="quest-info">
+                                <div class="quest-info__left">
+                                    <span>9 изображений</span>
+                                    <a class="btn-see" href="javascript:void(0);"></a>
+                                    <a class="btn-load" href="javascript:void(0);"></a>
+                                </div>
+                                <div class="quest-info__right">
+                                    <span>Дата завершения:</span>
+                                    <div class="date-box">
+                                        <input type="text" class="date" id="datepicker2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quest-open-messaging clearfix">
+                            <div class="message-left">
+                                <span>Admin</span>
+                                <div class="message">
+                                    <a href="https://www.figma.com/file/Q93glI21FwHorw2hSxxgbt/%D0%9F%D0%90%D0%AF%D0%9B%D0%AC%D0%9D%D0%98%D0%9A?node-id=122%3A202">https://www.figma.com/file/Q93glI21FwHorw2hSxxgbt/%D0%9F%D0%90%D0%AF%D0%9B%D0%AC%D0%9D%D0%98%D0%9A?node-id=122%3A202</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                        est laborum.</p>
+                                </div>
+                                <div class="message-date">12:23 / 12.05.2020</div>
+                            </div>
+                            <div class="message-right">
+                                <span>You</span>
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                                <div class="message-bottom">
+                                    <div class="message-date">12:23 / 12.05.2020</div>
+                                    <div class="message-view">Просмотрено</div>
+                                </div>
+                            </div>
+                            <div class="message-right" style="display: none;">
+                                <span>Вы</span>
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                                <div class="message-bottom">
+                                    <div class="message-date">12:23 / 12.05.2020</div>
+                                    <div class="message-view">Просмотрено</div>
+                                </div>
+                            </div>
+                            <div class="message-right" style="display: none;">
+                                <span>Вы</span>
+                                <div class="message">
+                                    <a href="https://www.figma.com/file/Q93glI21FwHorw2hSxxgbt/%D0%9F%D0%90%D0%AF%D0%9B%D0%AC%D0%9D%D0%98%D0%9A?node-id=122%3A202">https://www.figma.com/file/Q93glI21FwHorw2hSxxgbt/%D0%9F%D0%90%D0%AF%D0%9B%D0%AC%D0%9D%D0%98%D0%9A?node-id=122%3A202</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.
+                                    </p>
+                                </div>
+                                <div class="message-bottom">
+                                    <div class="message-date">12:23 / 12.05.2020</div>
+                                    <div class="message-view">Просмотрено</div>
+                                </div>
+                            </div>
+                            <div class="message-right files" style="display: none;">
+                                <span>Вы</span>
+                                <div class="message">
+                                    <div class="files-items">
+                                        <div class="files-item" style="background-image: url(../img/file1.jpg);">
+                                            <div class="files-item-title">image_name.jpeg</div>
+                                            <div class="files-item-format">JPEG</div>
+                                        </div>
+                                        <div class="files-item" style="background-image: url(../img/file1.jpg);">
+                                            <div class="files-item-title">archive_name.zip</div>
+                                            <div class="files-item-format">ZIP</div>
+                                        </div>
+                                        <div class="files-item" style="background-image: url(../img/file2.jpg);">
+                                            <div class="files-item-title">eps_name.eps</div>
+                                            <div class="files-item-format">EPS</div>
+                                        </div>
+                                        <div class="files-item" style="background-image: url(../img/file1.jpg);">
+                                            <div class="files-item-title">image_name.png</div>
+                                            <div class="files-item-format">PNG</div>
+                                        </div>
+                                        <div class="files-item" style="background-image: url(../img/file2.jpg);">
+                                            <div class="files-item-title">image_name.jpeg</div>
+                                            <div class="files-item-format">JPEG</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-bottom">
+                                    <div class="message-date">12:23 / 12.05.2020</div>
+                                    <div class="message-view">Просмотрено</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="/" method="POST" class="form-quest-message">
+                            <label for="file-message" class="label-file"><input id="file-message" type="file" multiple></label>
+                            <textarea id="textarea" name="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e</textarea>
+                            <button type="submit"></button>
+                        </form>
+                    </div>
+                    <div class="quest-setting-aside">
+                        <div class="quest-params">
+                            <div class="quest-params__item">
+                                <b>Задача:</b>
+                                <span>#873474</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Приоритет:</b>
+                                <span>Высокий</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Дата постановки:</b>
+                                <span>26.01.2021   /   18:09</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Дедлайн:</b>
+                                <span>28.01.2021</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Проект:</b>
+                                <span>Volkswagen Motom Воронеж</span>
+                            </div>
+                            <div class="quest-params__item quest-params__item--profile">
+                                <b>Постановщик:</b>
+                                <div class="profile">
+                                    <div class="profile-avatar">
+                                        <img src="../img/avatar.jpg" alt="">
+                                    </div>
+                                    <div class="profile-name">
+                                        <div class="user-name">User Name</div>
+                                        <div class="user-post">Администратор</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quest-params__item quest-params__item--profile">
+                                <b>Исполнитель:</b>
+                                <div class="profile">
+                                    <div class="profile-avatar">
+                                        <img src="../img/avatar2.png" alt="">
+                                    </div>
+                                    <div class="profile-name">
+                                        <div class="user-name">User Name</div>
+                                        <div class="user-post">Дизайнер</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

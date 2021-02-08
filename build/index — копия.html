@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('components/page/_1_head.html',{ 'title': 'Taskbook', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание">
+    <meta name="keywords" content="Ключевые слова">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicon/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicon/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicon/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Taskbook</title>
+</head>
 
 <body>
     <div class="wrapper">
-        @@include('components/page/aside.html')
+        <aside class="aside">
+    <a href="#" class="logo"><img src="../img/logo.svg" alt="" /></a>
+    <ul class="menu">
+        <li>
+            <a class="menu-ico1" href="#">
+                <span> Главная </span>
+            </a>
+        </li>
+        <li><a class="menu-ico2" href="#"><span>Задачи</span></a></li>
+        <li><a class="menu-ico3" href="#"><span>Компания</span></a></li>
+        <li><a class="menu-ico4" href="#"><span>Календарь</span></a></li>
+        <li><a class="menu-ico5" href="#"><span>Настройки</span></a></li>
+    </ul>
+</aside>
 
         <div class="main-wrap">
-            @@include('components/page/main-wrap-top.html')
+            <div class="main-wrap-top">
+    <form action="/" class="form-search" method="POST">
+        <input type="search" placeholder="Поиск">
+    </form>
+    <div class="profile">
+        <div class="profile-name">
+            <div class="user-name">User Name</div>
+            <div class="user-post">разработчик</div>
+        </div>
+        <div class="profile-avatar">
+            <img src="../img/avatar.jpg" alt="">
+        </div>
+    </div>
+</div>
             <div class="main-wrap-box">
                 <ul class="breadcrumbs">
                     <li><a href="#">Задачи</a></li>
@@ -122,31 +172,8 @@
 
     </div>
 
-    @@include('components/page/_4_scripts.html')
-    <script>
-        var myDropzone = new Dropzone("div#forQueue", {
-            url: "/",
-            addRemoveLinks: true,
-            paramName: "file",
-            maxFilesize: 2,
-            parallelUploads: 1,
-            maxFiles: 10,
-            acceptedFiles: 'image/*',
-            accept: function(file, done) {
-                $('#QueueN').append('<input type="hidden" class="name_photo" name=photo[] value="' + file.name + '" />');
-                done();
-            }
-
-        });
-
-        myDropzone.on("addedfile", function(file) {
-            $('.dz-started').slick({
-                infinite: true,
-                slidesToScroll: 1,
-                variableWidth: true
-            });
-        });
-    </script>
+    <script src="js/vendor.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

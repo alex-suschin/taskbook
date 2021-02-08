@@ -135,7 +135,36 @@
                         </form>
                     </div>
                     <div class="quest-setting-aside">
-
+                        <div class="quest-params">
+                            <div class="quest-params__item">
+                                <b>Приоритет:</b>
+                                <span>Высокий</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Дата постановки:</b>
+                                <span>26.01.2021   /   18:09</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Дедлайн:</b>
+                                <span>28.01.2021</span>
+                            </div>
+                            <div class="quest-params__item">
+                                <b>Проект:</b>
+                                <span>Volkswagen Motom Воронеж</span>
+                            </div>
+                            <div class="quest-params__item quest-params__item--profile">
+                                <b>Постановщик:</b>
+                                <div class="profile">
+                                    <div class="profile-avatar">
+                                        <img src="../img/avatar.jpg" alt="">
+                                    </div>
+                                    <div class="profile-name">
+                                        <div class="user-name">User Name</div>
+                                        <div class="user-post">Администратор</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,6 +174,30 @@
 
     <script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>
+    <script>
+        var myDropzone = new Dropzone("div#forQueue", {
+            url: "/",
+            addRemoveLinks: true,
+            paramName: "file",
+            maxFilesize: 2,
+            parallelUploads: 1,
+            maxFiles: 10,
+            acceptedFiles: 'image/*',
+            accept: function(file, done) {
+                $('#QueueN').append('<input type="hidden" class="name_photo" name=photo[] value="' + file.name + '" />');
+                done();
+            }
+
+        });
+
+        myDropzone.on("addedfile", function(file) {
+            $('.dz-started').slick({
+                infinite: true,
+                slidesToScroll: 1,
+                variableWidth: true
+            });
+        });
+    </script>
 </body>
 
 </html>

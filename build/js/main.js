@@ -20,31 +20,44 @@ $(function() {
         minDate: new Date()
     });
 
+    $('#datepicker2').datepicker({
+        showWeek: true,
+        firstDay: 1,
+        minDate: new Date()
+    });
+
     $('select').niceSelect();
 
 
-    var myDropzone = new Dropzone("div#forQueue", {
-        url: "/",
-        addRemoveLinks: true,
-        paramName: "file",
-        maxFilesize: 2,
-        parallelUploads: 1,
-        maxFiles: 10,
-        acceptedFiles: 'image/*',
-        accept: function(file, done) {
-            $('#QueueN').append('<input type="hidden" class="name_photo" name=photo[] value="' + file.name + '" />');
-            done();
+
+
+    function mobileTextarea() {
+        var elem = document.getElementById('textarea'); // здесь textarea - это идентификатор поля, которое будет растягиваться.
+        var minRows = 1; // высота поля textarea
+
+        if (elem) {
+            // функция расчета строк
+            function setRows() {
+                elem.rows = minRows; // минимальное количество строк
+                // цикл проверки вместимости контента
+                do {
+                    if (elem.clientHeight != elem.scrollHeight) elem.rows += 1;
+                } while (elem.clientHeight < elem.scrollHeight);
+            }
+            setRows();
+            elem.rows = minRows;
+
+            // пересчет строк в зависимости от набранного контента
+            elem.onkeyup = function() {
+                setRows();
+            }
         }
-
-    });
-
-    myDropzone.on("addedfile", function(file) {
-        $('.dz-started').slick({
-            infinite: true,
-            slidesToScroll: 1,
-            variableWidth: true
-        });
-    });
+    }
+    // навешиваем обработчики посе загрузки окна
+    if (window.addEventListener)
+        window.addEventListener("load", mobileTextarea, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", mobileTextarea);
 
 
 
