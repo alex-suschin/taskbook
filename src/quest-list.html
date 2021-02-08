@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Taskbook', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper">
+        @@include('components/page/aside.html')
+
+        <div class="main-wrap">
+            @@include('components/page/main-wrap-top.html')
+            <div class="main-wrap-box">
+                <div class="main-wrap-box-top">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Задачи</a></li>
+                        <li><a href="#">Текущие задачи</a></li>
+                        <li><a href="#">Список</a></li>
+                    </ul>
+
+                    <div class="filters">
+                        <select name="projects" id="projects">
+                            <option value="VW Ring">VW Ring</option>
+                            <option value="Discovery">Discovery</option>
+                            <option value="Drumataca">Drumataca</option>
+                            <option value="First_Klass">First_Klass</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Suzuki">Suzuki</option>
+                        </select>
+                        <select name="status" id="status">
+                            <option value="Новая">Новая</option>
+                            <option value="В работе">В работе</option>
+                            <option value="Выполнена">Выполнена</option>
+                            <option value="Отклонена">Отклонена</option>
+                        </select>
+                        <div class="date-range">
+                            <div class="date-range-item"><input placeholder="Начальная дата" class="start_one" data-multiple-dates-separator=" - " type="text" class="date" id="datepicker3"></div>
+                            <div class="date-range-item"><input placeholder="Конечная дата" type="text" class="date end_one"></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-list-box">
+                    <div class="quest-list-aside">
+
+                    </div>
+
+
+                    <div class="quest-items">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
