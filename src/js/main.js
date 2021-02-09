@@ -66,13 +66,7 @@ $(function() {
     else if (window.attachEvent)
         window.attachEvent("onload", mobileTextarea);
 
-    // $(".quest-items").mCustomScrollbar({
-    //     scrollbarPosition: "outside",
-    //     scrollInertia: 200,
-    //     autoExpandScrollbar: true,
-    //     advanced: { autoExpandHorizontalScroll: true },
-    //     setTop: "0px"
-    // });
+
 
     jQuery('.quest-items').scrollbar();
 
