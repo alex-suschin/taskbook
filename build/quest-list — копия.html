@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание">
+    <meta name="keywords" content="Ключевые слова">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicon/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicon/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicon/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Taskbook</title>
+</head>
+
+<body>
+    <div class="wrapper wrapper-quest-list">
+        <aside class="aside">
+    <a href="#" class="logo"><img src="../img/logo.svg" alt="" /></a>
+    <ul class="menu">
+        <li>
+            <a class="menu-ico1" href="#">
+                <span> Главная </span>
+            </a>
+        </li>
+        <li><a class="menu-ico2" href="#"><span>Задачи</span></a></li>
+        <li><a class="menu-ico3" href="#"><span>Компания</span></a></li>
+        <li><a class="menu-ico4" href="#"><span>Календарь</span></a></li>
+        <li><a class="menu-ico5" href="#"><span>Настройки</span></a></li>
+    </ul>
+</aside>
+
+        <div class="main-wrap">
+            <div class="main-wrap-top">
+    <form action="/" class="form-search" method="POST">
+        <input type="search" placeholder="Поиск">
+    </form>
+    <div class="profile">
+        <div class="profile-name">
+            <div class="user-name">User Name</div>
+            <div class="user-post">разработчик</div>
+        </div>
+        <div class="profile-avatar">
+            <img src="../img/avatar.jpg" alt="">
+        </div>
+    </div>
+</div>
+            <div class="main-wrap-box">
+                <div class="main-wrap-box-top">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Задачи</a></li>
+                        <li><a href="#">Текущие задачи</a></li>
+                        <li><a href="#">Список</a></li>
+                    </ul>
+
+                    <div class="filters">
+                        <select name="projects" id="projects">
+                            <option value="Проекты" disabled selected>Проекты</option>
+                            <option value="VW Ring">VW Ring</option>
+                            <option value="Discovery">Discovery</option>
+                            <option value="Drumataca">Drumataca</option>
+                            <option value="First_Klass">First_Klass</option>
+                            <option value="Subaru">Subaru</option>
+                            <option value="Suzuki">Suzuki</option>
+                        </select>
+                        <select name="status" id="status">
+                            <option value="Статус" disabled selected>Статус</option>
+                            <option value="Новая">Новая</option>
+                            <option value="В работе">В работе</option>
+                            <option value="Выполнена">Выполнена</option>
+                            <option value="Отклонена">Отклонена</option>
+                        </select>
+                        <div class="date-range">
+                            <div class="date-range-item"><input placeholder="Выберите промежуток" class="start_one" data-multiple-dates-separator=" - " type="text" class="date" id="datepicker3"></div>
+                            <div class="date-range-item"><input placeholder="" type="text" class="date end_one"></div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quest-list-box">
+                    <div class="quest-list-aside">
+                        <div class="profile-box">
+                            <div class="profile-box-img"><img src="../img/avatar3.jpg" alt=""></div>
+                            <a href="javascript:void(0);" class="btn-change-avatar">сменить фото</a>
+                            <div class="profile-box-name">Tony Stark</div>
+                            <div class="profile-box-mail">username@mail.com</div>
+                        </div>
+                        <a href="javascript:void(0);" class="btn-fiol btn-new-quest">Создать задачу</a>
+                    </div>
+
+
+                    <div class="quest-items scrollbar-outer">
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="new">Новая</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="inwork">В работе</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="rejected">Отклонена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="new">Новая</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="rejected">Отклонена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                        <div class="quest-item">
+                            <div class="quest-item--person">
+                                <div class="person-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                <div class="person-name">User Name</div>
+                            </div>
+                            <div class="quest-item--num">#87347</div>
+                            <div class="quest-item--title">Редизайн VW Ring</div>
+                            <div class="quest-item--date">28.01.2021</div>
+                            <div class="quest-item--status"><span class="complete">Выполнена</span></div>
+                            <div class="quest-item--link"><a href="#">перейти</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

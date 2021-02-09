@@ -72,6 +72,26 @@ $(function() {
         ignoreOverlay: true
     });
 
+    jQuery('.client-items-executor').scrollbar({
+        ignoreOverlay: true
+    });
+
+    jQuery('.client-items-cleint').scrollbar({
+        ignoreOverlay: true
+    });
+
+    $('.btn-show-info').click(function() {
+        $(this).closest('.client-item').toggleClass('active');
+        $(this).closest('.client-item').find('.client-item-hide').slideToggle();
+    });
+
+    $('.btns-company a').click(function() {
+        $('.btns-company').find('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.client-items-box').find('.client-items-box__item').hide();
+        $('#' + $(this).data('switch')).show();
+    });
+
 });
 
 
