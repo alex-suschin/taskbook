@@ -68,7 +68,9 @@ $(function() {
 
 
 
-    jQuery('.quest-items').scrollbar();
+    jQuery('.quest-items').scrollbar({
+        ignoreOverlay: true
+    });
 
 });
 

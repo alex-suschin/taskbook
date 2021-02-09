@@ -1566,7 +1566,7 @@ button.btn-fiol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 29px 0 0;
+  padding: 0 46px 0 0;
   margin-bottom: 18px; }
   .main-wrap-box-top .nice-select {
     border: 1px solid #4F5DD9;
@@ -1602,13 +1602,14 @@ button.btn-fiol {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 29px 0 0; }
+  padding: 0 30px 0 0; }
 
 .quest-list-aside {
-  width: 15.718%;
-  margin-right: 30px; }
+  max-width: 240px;
+  width: 15.545%; }
 
 .quest-items {
+  max-width: 1290px;
   width: 83.432%;
   max-height: calc(100vh - 180px);
   margin-bottom: 24px; }
@@ -1731,6 +1732,7 @@ button.btn-fiol {
   width: 100%; }
 
 .quest-item {
+  max-width: 1274px;
   background: #FFFFFF;
   padding: 16px 30px 16px 30px;
   border-radius: 12px;
@@ -1973,13 +1975,10 @@ span.rejected {
 .scrollbar-outer > .scroll-element .scroll-bar:hover {
   background: rgba(0, 0, 0, 0.15); }
 
-.scrollbar-outer > .scroll-element.scroll-draggable .scroll-bar {
-  background-color: transparent; }
-
 /* scrollbar height/width & offset from container borders */
 .scrollbar-outer > .scroll-content.scroll-scrolly_visible {
-  left: -12px;
-  margin-left: 12px; }
+  left: 0;
+  margin-left: 0; }
 
 .scrollbar-outer > .scroll-content.scroll-scrollx_visible {
   top: -12px;
