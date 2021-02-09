@@ -43,14 +43,12 @@ $(function() {
 
 
     function mobileTextarea() {
-        var elem = document.getElementById('textarea'); // здесь textarea - это идентификатор поля, которое будет растягиваться.
-        var minRows = 1; // высота поля textarea
+        var elem = document.getElementById('textarea');
+        var minRows = 1;
 
         if (elem) {
-            // функция расчета строк
             function setRows() {
-                elem.rows = minRows; // минимальное количество строк
-                // цикл проверки вместимости контента
+                elem.rows = minRows;
                 do {
                     if (elem.clientHeight != elem.scrollHeight) elem.rows += 1;
                 } while (elem.clientHeight < elem.scrollHeight);
@@ -58,21 +56,28 @@ $(function() {
             setRows();
             elem.rows = minRows;
 
-            // пересчет строк в зависимости от набранного контента
             elem.onkeyup = function() {
                 setRows();
             }
         }
     }
-    // навешиваем обработчики посе загрузки окна
     if (window.addEventListener)
         window.addEventListener("load", mobileTextarea, false);
     else if (window.attachEvent)
         window.attachEvent("onload", mobileTextarea);
 
-
+    $(".quest-items").mCustomScrollbar({
+        scrollbarPosition: "outside",
+        scrollInertia: 200,
+        autoExpandScrollbar: true,
+        advanced: { autoExpandHorizontalScroll: true },
+        setTop: "0px"
+    });
 
 });
+
+
+
 
 $(window).on('load resize scroll', function() {
 
