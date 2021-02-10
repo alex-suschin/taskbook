@@ -96,6 +96,20 @@ $(function() {
         $('.overlay').addClass('hide');
     });
 
+    $('.btn-js-client').click(function() {
+        $('#popup_wrap_client').addClass('popup_active');
+        $('.popup-client').addClass('popup_active');
+    });
+
+    $('.btn-new-project').click(function() {
+        $('#popup_wrap_project').addClass('popup_active');
+        $('.popup-project').addClass('popup_active');
+    });
+
+    $('.popup-close').click(function() {
+        $(this).closest('.popup_wrap').removeClass('popup_active');
+        $(this).parents('.popup').removeClass('popup_active');
+    });
 });
 
 
