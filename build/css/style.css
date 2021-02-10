@@ -1545,6 +1545,7 @@ button.btn-fiol {
   color: #FFFFFF; }
 
 .filters {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1554,6 +1555,16 @@ button.btn-fiol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.filters::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 18px;
+  background: url(../img/filters-ico.svg) no-repeat center;
+  position: absolute;
+  top: 5px;
+  left: -35px; }
 
 .main-wrap-box-top {
   display: -webkit-box;

@@ -349,10 +349,25 @@
     margin: 0 3px;
     margin-bottom: 0;
     border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -ms-border-radius: 0!important;
+    -o-border-radius: 0!important;
+}
+
+.datepicker--cell-year.-current- {
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -ms-border-radius: 0!important;
+    -o-border-radius: 0!important;
+}
+
+.datepicker--cell-year::before,
+.datepicker--cell-year::after {
+    content: none!important;
 }
 
 .datepicker--cell-day.-other-month-,

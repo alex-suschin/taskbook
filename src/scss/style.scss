@@ -1740,9 +1740,21 @@ button.btn-fiol {
 }
 
 .filters {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.filters::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 18px;
+    background: url(../img/filters-ico.svg) no-repeat center;
+    position: absolute;
+    top: 5px;
+    left: -35px;
 }
 
 .main-wrap-box-top {
