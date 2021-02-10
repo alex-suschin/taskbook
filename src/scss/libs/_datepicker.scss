@@ -99,8 +99,30 @@
 .datepicker--cell.-current-.-in-range- {}
 
 .datepicker--cell.-in-range- {
-    background: rgba(79, 93, 217, 0.1);
     border-radius: 0;
+    // background: rgba(79, 93, 217, 0.1);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.datepicker--cell.-in-range-::before {
+    content: '';
+    width: 167%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    left: -15px;
+}
+
+.datepicker--cell.-range-to-::before {
+    content: '';
+    width: 167%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    left: -15px;
 }
 
 .datepicker--cell.-in-range-.-focus- {
@@ -124,18 +146,6 @@
     color: #aeaeae;
 }
 
-.datepicker--cell.-range-from- {
-    border: 1px solid rgba(92, 196, 239, 0.5);
-    background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 4px 0 0 4px;
-}
-
-.datepicker--cell.-range-to- {
-    border: 1px solid rgba(92, 196, 239, 0.5);
-    background-color: rgba(92, 196, 239, 0.1);
-    border-radius: 0 4px 4px 0;
-}
-
 .datepicker--cell.-range-from-.-range-to- {
     border-radius: 4px;
 }
@@ -157,6 +167,26 @@
 
 .datepicker--cell:empty {
     cursor: default;
+}
+
+.datepicker--cell.-range-from- {
+    background: #FFE86C;
+    box-shadow: 0px 1px 8px rgba(239, 144, 16, 0.48);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.datepicker--cell.-range-to- {
+    background: #FFE86C;
+    box-shadow: 0px 1px 8px rgba(239, 144, 16, 0.48);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .datepicker--days-names {
@@ -214,6 +244,7 @@
 
 .datepicker--cell-day {
     width: 8.55571%;
+    position: relative;
 }
 
 .datepicker--cells-months {
@@ -579,8 +610,8 @@
     right: 53px;
 }
 
-.datepicker--nav-action:hover {
-    background: #f0f0f0;
+.datepicker--nav-action:hover path {
+    stroke: #EFCB10;
 }
 
 .datepicker--nav-action.-disabled- {
@@ -594,7 +625,7 @@
 
 .datepicker--nav-action path {
     fill: none;
-    stroke: #9c9c9c;
+    stroke: #000;
     stroke-width: 2px;
 }
 
