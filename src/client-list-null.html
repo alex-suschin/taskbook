@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Taskbook', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper wrapper-clients-null">
+        <div class="overlay">
+            <div class="overlay-content">
+                <p>Воспользуйтесь кнопкой “Добавить клиента”, для создания нового пользователя.</p>
+                <a href="#">Ок</a>
+            </div>
+        </div>
+        @@include('components/page/aside.html')
+
+        <div class="main-wrap">
+            @@include('components/page/main-wrap-top.html')
+            <div class="main-wrap-box">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Текущие задачи</a></li>
+                    <li><a href="#">Список</a></li>
+                </ul>
+
+                <div class="quest-list-box">
+                    <div class="quest-list-aside">
+                        <div class="profile-box">
+                            <div class="profile-box-img"><img src="../img/promo.png" alt=""></div>
+                            <a href="javascript:void(0);" class="btn-change-avatar">сменить фото</a>
+                            <div class="profile-box-name">Генерация</div>
+                            <div class="profile-box-mail">promo01.ru</div>
+                        </div>
+                        <a href="javascript:void(0);" class="btn-fiol btn-new-quest">Добавить клиента</a>
+                    </div>
+
+                    <div class="client-items-box">
+                        <div class="client-items-box__item">
+                            <div class="client-items client-items-executor scrollbar-outer">
+                                <div class="client-item">
+                                    <div class="client-item-top">
+                                        <div class="client-item--person">
+                                            <div class="client-img"><img src="../img/avatar3.jpg" alt=""></div>
+                                            <div class="client-name">User Name</div>
+                                        </div>
+                                        <div class="client-item--mail"><a href="mailto:username">username@mail.com</a></div>
+                                        <div class="client-item--status"><span class="online">онлайн</span></div>
+                                        <div class="client-item--btn-more">
+                                            <a class="btn-new-project" href="javascript:void(0);">Создать проект</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>

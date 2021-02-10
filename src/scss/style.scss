@@ -2576,6 +2576,93 @@ span.rejected {
     height: 100%;
 }
 
+.client-item--btn-more .btn-new-project {
+    justify-content: center;
+    border: 1px solid #4F5DD9;
+    box-sizing: border-box;
+    border-radius: 11px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    color: #4F5DD9;
+    padding: 8px 0 8px 0;
+    max-width: 159px;
+    width: 100%;
+}
+
+.client-item--btn-more .btn-new-project:hover {
+    background-color: #4F5DD9;
+    color: #fff;
+}
+
+.menu .null-list a span {
+    position: relative;
+}
+
+.menu .null-list a span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -25px;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    background: #FA2B76;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.wrapper-clients-null {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.16);
+    z-index: 99;
+}
+
+.overlay-content {
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    padding: 16px 17.5px 18px 17.5px;
+    background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.85) 0.99%, rgba(255, 255, 255, 0.24) 99.58%);
+    border: 0.6px solid rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+    backdrop-filter: blur(30px);
+    border-radius: 12px;
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 159%;
+        text-align: center;
+        color: #000000;
+    }
+    a {
+        display: block;
+        max-width: 120px;
+        width: 100%;
+        border: 1px solid #4F5DD9;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+        color: #4F5DD9;
+        padding: 12px 0 12px 0;
+    }
+}
+
 
 /* 
     M O B I L E
