@@ -2399,21 +2399,33 @@ span.rejected {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.16);
-  z-index: 99; }
+  z-index: 99;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out; }
 
 .overlay-content {
   position: absolute;
+  left: 657px;
+  top: 483px;
   max-width: 250px;
   width: 100%;
-  padding: 16px 17.5px 18px 17.5px;
+  padding: 15px 17.5px 17px 17.5px;
   background: -o-linear-gradient(335.56deg, rgba(255, 255, 255, 0.85) 0.99%, rgba(255, 255, 255, 0.24) 99.58%);
   background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.85) 0.99%, rgba(255, 255, 255, 0.24) 99.58%);
   border: 0.6px solid rgba(255, 255, 255, 0.14);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  border-radius: 12px; }
+  backdrop-filter: blur(30px);
+  border-radius: 12px;
+  transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out; }
   .overlay-content p {
     font-weight: normal;
     font-size: 16px;
@@ -2422,6 +2434,7 @@ span.rejected {
     color: #000000; }
   .overlay-content a {
     display: block;
+    margin: 0 auto;
     max-width: 120px;
     width: 100%;
     border: 1px solid #4F5DD9;
@@ -2434,6 +2447,26 @@ span.rejected {
     text-align: center;
     color: #4F5DD9;
     padding: 12px 0 12px 0; }
+  .overlay-content a:hover {
+    background: #4F5DD9;
+    color: #fff; }
+
+.overlay-content::before {
+  content: '';
+  display: block;
+  width: 226px;
+  height: 49px;
+  background: url(../img/arr-dashed.svg) no-repeat center;
+  position: absolute;
+  top: -59px;
+  left: -160px; }
+
+.overlay.hide {
+  opacity: 0;
+  visibility: hidden; }
+
+.overlay.hide .overlay-content {
+  opacity: 0; }
 
 /* 
     M O B I L E

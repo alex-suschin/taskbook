@@ -92,6 +92,10 @@ $(function() {
         $('#' + $(this).data('switch')).show();
     });
 
+    $('.btn-ok').click(function() {
+        $('.overlay').addClass('hide');
+    });
+
 });
 
 
