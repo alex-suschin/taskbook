@@ -118,11 +118,74 @@
 
 .datepicker--cell.-range-to-::before {
     content: '';
-    width: 167%;
+    width: 101%;
     height: 100%;
     background: rgba(79, 93, 217, 0.1);
     position: absolute;
     left: -15px;
+    z-index: -1;
+}
+
+.datepicker--cell.-range-to-::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #FFE86C;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.datepicker--cell.-range-from-::before {
+    content: '';
+    width: 67%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    left: 7px;
+    z-index: -1;
+}
+
+.datepicker--cell.-range-from-::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #FFE86C;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.-weekend-.-in-range-+.-weekend-.-in-range-::after {
+    content: '';
+    width: 101%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    right: -22px;
+    z-index: -1;
 }
 
 .datepicker--cell.-in-range-.-focus- {
@@ -415,6 +478,7 @@
 .datepicker--content {
     box-sizing: content-box;
     padding: 4px 7px 4px 7px;
+    overflow: hidden;
 }
 
 .-only-timepicker- .datepicker--content {
