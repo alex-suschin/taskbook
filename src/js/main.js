@@ -30,7 +30,7 @@ $(function() {
         range: 'multiple',
         showWeek: true,
         firstDay: 1,
-        dateFormat: 'MM.dd.yyyy',
+        dateFormat: 'mm.dd.yyyy',
         onSelect: function(fd, d, picker) {
             $(".start_one").val(fd.split("-")[0]);
             $(".end_one").val(fd.split("-")[1]);

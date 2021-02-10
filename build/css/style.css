@@ -1614,6 +1614,7 @@ button.btn-fiol {
   margin-bottom: 24px; }
 
 .date-range {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1631,7 +1632,22 @@ button.btn-fiol {
           box-sizing: border-box;
   border-radius: 11px;
   height: 30px;
-  padding: 0 32px 0 17px; }
+  padding: 0 17px 0 17px; }
+
+.date-range::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 14px;
+  background: #B9BBD1;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%); }
 
 .date-range-item {
   position: relative;
@@ -1641,7 +1657,9 @@ button.btn-fiol {
   color: #000000;
   background: transparent;
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  max-width: 110px;
+  width: 100%; }
 
 #datepicker3,
 .end_one {
@@ -1652,7 +1670,21 @@ button.btn-fiol {
   color: #000000;
   background: transparent;
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  padding-right: 15px; }
+
+.end_one {
+  text-align: right; }
+
+.date-range-item::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 6px;
+  background: url(../img/arr-date-range.svg) no-repeat center;
+  position: absolute;
+  right: 0;
+  top: 5px; }
 
 .profile-box {
   display: -webkit-box;

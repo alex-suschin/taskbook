@@ -318,11 +318,21 @@
     width: 33.33%;
     height: 25%;
     margin: 0;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    -moz-border-radius: 0!important;
+    -ms-border-radius: 0!important;
+    -o-border-radius: 0!important;
+    box-shadow: none!important;
+}
+
+.datepicker--cell-month.-curent- {
+    box-shadow: none!important;
+}
+
+.datepicker--cell-month::before,
+.datepicker--cell-month::after {
+    content: none!important;
 }
 
 .datepicker--years {
