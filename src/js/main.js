@@ -5,10 +5,10 @@ $(function() {
     $('#hamburger-icon').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
-            $('.mobile-menu').addClass('active');
+            $('aside').addClass('active');
             $('html').addClass('ov-hidden');
         } else {
-            $('.mobile-menu').removeClass('active');
+            $('aside').removeClass('active');
             $('html').removeClass('ov-hidden');
         }
     });
@@ -65,6 +65,33 @@ $(function() {
         window.addEventListener("load", mobileTextarea, false);
     else if (window.attachEvent)
         window.attachEvent("onload", mobileTextarea);
+
+
+    function mobileTextarea() {
+        var elem = document.getElementById('desc-quest');
+        var minRows = 1;
+
+        if (elem) {
+            function setRows() {
+                elem.rows = minRows;
+                do {
+                    if (elem.clientHeight != elem.scrollHeight) elem.rows += 1;
+                } while (elem.clientHeight < elem.scrollHeight);
+            }
+            setRows();
+            elem.rows = minRows;
+
+            elem.onkeyup = function() {
+                setRows();
+            }
+        }
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", mobileTextarea, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", mobileTextarea);
+
+
 
 
 
