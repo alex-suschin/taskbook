@@ -99,7 +99,6 @@ button {
     font-size: 42px;
     font-weight: 700;
     line-height: 53px;
-    text-transform: uppercase;
     margin-bottom: 20px;
 }
 
@@ -2339,7 +2338,7 @@ span.rejected {
     display: block;
     position: absolute;
     left: -12px;
-    top: 5px;
+    top: 7px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -2829,6 +2828,35 @@ span.rejected {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+
+.search-box {
+    padding: 11px 46px 0 0;
+    .title {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    .quest-item,
+    .client-item {
+        max-width: 100%;
+    }
+}
+
+.search-list {
+    margin-bottom: 26px;
+}
+
+.search-result {
+    .title {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 12px;
+    }
 }
 
 
