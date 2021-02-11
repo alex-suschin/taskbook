@@ -724,6 +724,32 @@ button.btn-fiol {
     display: none;
 }
 
+#uploadFiles_dz {
+    display: none;
+}
+
+.dropzone-imgages .slick-list {
+    padding-top: 20px;
+}
+
+.dropzone-imgages .slick-slide {
+    margin: 0 7.5px;
+    outline: none;
+    max-width: 120px;
+    width: 100%;
+    height: 120px;
+}
+
+.dropzone .dz-preview .dz-image img {
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
 @-webkit-keyframes passing-through {
     0% {
         opacity: 0;
@@ -968,23 +994,32 @@ button.btn-fiol {
 .dropzone .dz-message {
     position: relative;
     text-align: center;
-    margin: 0 0 38px 0;
     height: 120px;
-    width: 100%;
+    width: 120px;
+    background-color: #FAFAFA;
+    border: 1px dashed #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-image: url(../img/download-ico.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.dz-message::after {
-    content: 'Прикрепить файлы';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-}
-
+// .dz-message::after {
+//     content: 'Прикрепить файлы';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//     font-size: 20px;
+// }
 .dropzone .dz-message .dz-button {
     background: none;
     color: inherit;
@@ -1000,7 +1035,6 @@ button.btn-fiol {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    margin: 7.5px;
     min-height: 100px;
 }
 
@@ -1346,6 +1380,10 @@ button.btn-fiol {
 
 .datepicker--pointer {
     background: transparent;
+}
+
+.quest-setting-form .btn-fiol {
+    margin-top: 38px;
 }
 
 .quest-open {
@@ -2279,6 +2317,59 @@ span.rejected {
     top: -14px;
 }
 
+.external-scroll_x,
+.external-scroll_y {
+    border: solid 1px #9999fc;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+
+.external-scroll_x.scroll-scrollx_visible {
+    display: block;
+    height: 10px;
+    left: 0;
+    top: 410px;
+    width: 200px;
+}
+
+.external-scroll_y.scroll-scrolly_visible {
+    display: block;
+    height: 200px;
+    left: 610px;
+    top: 0;
+    width: 10px;
+}
+
+.external-scroll_x div,
+.external-scroll_y div {
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.external-scroll_x .scroll-bar,
+.external-scroll_y .scroll-bar {
+    background: #9999fc;
+    z-index: 12;
+}
+
+.external-scroll_x .scroll-bar {
+    width: 100px;
+}
+
+.external-scroll_y .scroll-bar {
+    height: 100px;
+}
+
+.dropzone-imgages {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 150px;
+}
+
 .btns-company {
     display: flex;
     justify-content: flex-start;
@@ -3036,15 +3127,36 @@ span.rejected {
     .btn-search {
         display: block;
     }
-    .form-search {
-        display: none;
-    }
     .main-wrap-top {
+        position: relative;
         border-bottom: 1px solid #E5E5E5;
         padding: 21px 16px 21px 16px;
         .logo {
             display: block;
         }
+    }
+    .form-search {
+        position: absolute;
+        left: 50px;
+        width: 0;
+        background: none;
+        padding: 0;
+        height: 100%;
+        z-index: 999;
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        -ms-transition: .3s linear;
+        -o-transition: .3s linear;
+        input {
+            height: 100%;
+        }
+    }
+    .form-search.active {
+        width: 90%;
+    }
+    .form-search::after {
+        content: none;
     }
     aside {
         display: none;
@@ -3060,7 +3172,7 @@ span.rejected {
             display: none;
         }
         position: fixed;
-        top: 60px;
+        top: 61px;
         right: 0;
         min-height: initial;
         width: 100vw;
@@ -3069,7 +3181,7 @@ span.rejected {
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 61px);
         z-index: 30;
         overflow: auto;
         background: #fff;
@@ -3100,6 +3212,12 @@ span.rejected {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .form-search.active {
+        width: 85%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .container {
         width: 320px;
@@ -3112,7 +3230,16 @@ span.rejected {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .form-search.active {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 575px) {
+    .aside {
+        max-width: 256px;
+    }
     .main-wrap-box {
         padding: 17px 12px 0 12px;
     }
@@ -3148,6 +3275,12 @@ span.rejected {
     }
     .form-item-small .nice-select {
         padding: 0 12px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .form-search.active {
+        width: 72%;
     }
 }
 

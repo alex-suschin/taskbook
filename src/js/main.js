@@ -131,6 +131,10 @@ $(function() {
         ignoreOverlay: true
     });
 
+    jQuery('.dropzone-imgages').scrollbar({
+        "scrollx": "advanced"
+    });
+
     $('.btn-show-info').click(function() {
         $(this).closest('.client-item').toggleClass('active');
         $(this).closest('.client-item').find('.client-item-hide').slideToggle();
@@ -161,6 +165,28 @@ $(function() {
         $(this).closest('.popup_wrap').removeClass('popup_active');
         $(this).parents('.popup').removeClass('popup_active');
     });
+
+    $('.btn-search').click(function(e) {
+        $('.form-search').toggleClass('active');
+        $('.form-search input').focus();
+    });
+    jQuery(function($) {
+        $(document).mouseup(function(e) {
+            if (!$(".btn-search").is(e.target) && !$(".form-search").is(e.target) &&
+                $(".form-search").has(e.target).length === 0) {
+                $(".form-search").removeClass('active');
+            }
+        });
+    });
+
+    // $('.dz-remove').on('click', function() {
+    //     $('.dropzone-imgages').slick('slickRemove', slideIndex - 1);
+    //     if (slideIndex !== 0) {
+    //         slideIndex--;
+    //     }
+    // });
+
+
 });
 
 
