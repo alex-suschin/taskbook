@@ -67,7 +67,7 @@ $(function() {
         window.attachEvent("onload", mobileTextarea);
 
 
-    function mobileTextarea() {
+    function mobileTextarea2() {
         var elem = document.getElementById('desc-quest');
         var minRows = 1;
 
@@ -87,9 +87,33 @@ $(function() {
         }
     }
     if (window.addEventListener)
-        window.addEventListener("load", mobileTextarea, false);
+        window.addEventListener("load", mobileTextarea2, false);
     else if (window.attachEvent)
-        window.attachEvent("onload", mobileTextarea);
+        window.attachEvent("onload", mobileTextarea2);
+
+    function mobileTextarea3() {
+        var elem = document.getElementById('textarea-title');
+        var minRows = 1;
+
+        if (elem) {
+            function setRows() {
+                elem.rows = minRows;
+                do {
+                    if (elem.clientHeight != elem.scrollHeight) elem.rows += 1;
+                } while (elem.clientHeight < elem.scrollHeight);
+            }
+            setRows();
+            elem.rows = minRows;
+
+            elem.onkeyup = function() {
+                setRows();
+            }
+        }
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", mobileTextarea3, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", mobileTextarea3);
 
 
 

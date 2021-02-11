@@ -2962,6 +2962,12 @@ span.rejected {
     background: url(../img/search-ico-mob.svg) no-repeat center;
 }
 
+#textarea-title {
+    min-height: 38px;
+    padding: 8px 20px 10px 20px;
+    line-height: 140%;
+}
+
 
 /* 
     M O B I L E
@@ -3035,7 +3041,7 @@ span.rejected {
     }
     .main-wrap-top {
         border-bottom: 1px solid #E5E5E5;
-        padding: 21px 16px 20px 16px;
+        padding: 21px 16px 21px 16px;
         .logo {
             display: block;
         }
@@ -3100,6 +3106,48 @@ span.rejected {
     }
     .modal-content {
         margin: 0 15px;
+    }
+    .btn-plus {
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .main-wrap-box {
+        padding: 17px 12px 0 12px;
+    }
+    .breadcrumbs {
+        padding-left: 4px;
+        a {
+            font-size: 12px;
+        }
+    }
+    .quest-setting-box {
+        padding: 20px 12px 22px 12px;
+    }
+    .priority-items {
+        flex-direction: column;
+    }
+    .priority label {
+        margin-bottom: 25px;
+    }
+    #textarea-title {
+        padding: 11px 11px 9px 12px;
+    }
+    .breadcrumbs li {
+        margin-right: 29px;
+    }
+    .form-item {
+        margin-bottom: 23px;
+    }
+    .priority {
+        border-bottom: 1px solid #EBEBEB;
+    }
+    .form-item input {
+        padding: 0 12px;
+    }
+    .form-item-small .nice-select {
+        padding: 0 12px;
     }
 }
 
