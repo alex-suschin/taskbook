@@ -2819,6 +2819,17 @@ span.rejected {
 /* 
     M O B I L E
 */
+@media screen and (max-width: 1500px) {
+  .quest-info__right {
+    width: 55%; } }
+
+@media screen and (max-width: 1440px) {
+  .quest-open .quest-setting-aside {
+    width: 25%;
+    padding: 0 15px 0 30px; }
+  .quest-open-box {
+    width: 73%; } }
+
 @media screen and (max-width: 1400px) {
   .quest-setting-box {
     padding: 50px 35px 29px 35px; }
@@ -2840,7 +2851,31 @@ span.rejected {
   .quest-setting-box {
     width: 70%; }
   .quest-setting-aside {
-    width: 27%; } }
+    width: 27%; }
+  .quest-open .quest-setting-aside {
+    padding: 0 15px 0 10px; } }
+
+@media screen and (max-width: 1280px) {
+  .quest-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .quest-info__left,
+  .quest-info__right {
+    width: 100%; }
+  .quest-info__left {
+    margin-bottom: 28px; }
+  .quest-info__right {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
 
 @media screen and (max-width: 1200px) {
   html,
@@ -2857,7 +2892,9 @@ span.rejected {
   .quest-setting-box {
     width: 100%; }
   .main-wrap-box {
-    padding: 21px 45px 0 45px; } }
+    padding: 21px 45px 0 45px; }
+  .quest-open-box {
+    width: 100%; } }
 
 @media screen and (max-width: 991px) {
   #hamburger-icon {
@@ -2965,10 +3002,46 @@ span.rejected {
     width: 80%; } }
 
 @media screen and (max-width: 575px) {
+  .quest-info__right .date {
+    padding: 0 12px; }
+  .date-box {
+    max-width: 100%;
+    width: 100%; }
+  .quest-title {
+    font-size: 16px;
+    margin-bottom: 17px; }
+  .form-quest-message textarea {
+    padding: 12px 45px 10px 41px; }
+  .message {
+    max-width: 86%;
+    padding: 16px 16px 6px 16px; }
+  .message-right {
+    width: 86%; }
+    .message-right .message {
+      max-width: 100%; }
+  .quest-open-messaging {
+    padding: 12px 12px 0 12px; }
+  .quest-info__right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .quest-info__right span {
+    margin-bottom: 10px;
+    color: #9B9B9B; }
+  .quest-open-box-top {
+    padding: 16px 12px 12px 12px; }
+  .message p {
+    font-size: 12px; }
+  .message a {
+    font-size: 12px; }
   .aside {
     max-width: 256px; }
   .main-wrap-box {
-    padding: 17px 12px 0 12px; }
+    padding: 17px 12px 16px 12px; }
   .breadcrumbs {
     padding-left: 4px; }
     .breadcrumbs a {
