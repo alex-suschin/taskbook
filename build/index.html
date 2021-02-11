@@ -132,9 +132,19 @@
                             </div>
                             <div class="form-item">
                                 <label for="">Прикрепить файлы:</label>
-                                <input type="file" multiple="true" id="uploadFiles_dz" />
-                                <div id="forQueue" class="dropzone">
-                                    <div class="dropzone-imgages"></div>
+                                <div class="scrollbar-external_wrapper">
+                                    <div id="forQueue" class="dropzone scrollbar-external">
+                                        <input type="file" multiple="true" id="uploadFiles_dz" />
+                                        <!-- <div class="dropzone-images scrollbar-external"></div> -->
+
+                                    </div>
+                                    <div class="external-scroll_x">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <button type="submit" class="btn-fiol">Создать задачу</button>
@@ -188,7 +198,7 @@
             maxFilesize: 2,
             parallelUploads: 1,
             maxFiles: 10,
-            previewsContainer: '.dropzone-imgages',
+            // previewsContainer: '.dropzone-images',
             accept: function(file, done) {
                 $('#QueueN').append('<input type="hidden" class="name_photo" name=photo[] value="' + file.name + '" />');
                 done();

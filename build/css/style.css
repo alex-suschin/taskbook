@@ -812,6 +812,7 @@ button.btn-fiol {
 
 .dropzone,
 .dropzone * {
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -857,10 +858,13 @@ button.btn-fiol {
   font-size: 0; }
 
 .dropzone .dz-preview {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   display: inline-block;
   vertical-align: top;
-  min-height: 100px; }
+  min-height: 100px;
+  margin: 0 7.5px; }
 
 .dropzone .dz-preview:hover {
   z-index: 1000; }
@@ -2072,17 +2076,18 @@ span.rejected {
 
 .external-scroll_x,
 .external-scroll_y {
-  border: solid 1px #9999fc;
+  background: #EDEDED;
+  border-radius: 2px;
   cursor: pointer;
   display: none;
   position: absolute; }
 
 .external-scroll_x.scroll-scrollx_visible {
   display: block;
-  height: 10px;
+  height: 4px;
   left: 0;
-  top: 410px;
-  width: 200px; }
+  bottom: 0;
+  width: 100%; }
 
 .external-scroll_y.scroll-scrolly_visible {
   display: block;
@@ -2101,7 +2106,8 @@ span.rejected {
 
 .external-scroll_x .scroll-bar,
 .external-scroll_y .scroll-bar {
-  background: #9999fc;
+  background: #CECECE;
+  border-radius: 2px;
   z-index: 12; }
 
 .external-scroll_x .scroll-bar {
@@ -2110,13 +2116,26 @@ span.rejected {
 .external-scroll_y .scroll-bar {
   height: 100px; }
 
-.dropzone-imgages {
+.dropzone-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  padding-top: 15px !important; }
+
+.scrollbar-external_wrapper {
+  position: relative;
+  overflow: hidden;
   height: 150px; }
+
+#forQueue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-top: 15px !important; }
 
 .btns-company {
   display: -webkit-box;

@@ -131,8 +131,11 @@ $(function() {
         ignoreOverlay: true
     });
 
-    jQuery('.dropzone-imgages').scrollbar({
-        "scrollx": "advanced"
+    jQuery('#forQueue').scrollbar({
+        ignoreOverlay: true,
+        "scrollx": $('.external-scroll_x'),
+        autoScrollSize: true,
+        autoUpdate: true
     });
 
     $('.btn-show-info').click(function() {
