@@ -151,19 +151,19 @@
 
         });
 
-        // myDropzone.on("addedfile", function(file) {
-        //     setTimeout(() => {
-        //         $('.dropzone-imgages').slick({
-        //             infinite: false,
-        //             slidesToScroll: 1,
-        //             variableWidth: true,
-        //             swipeToSlide: true
-        //         });
-        //     }, 10);
+        myDropzone.on("addedfile", function(file) {
+            // setTimeout(() => {
+            //     $('.dropzone-imgages').slick({
+            //         infinite: false,
+            //         slidesToScroll: 1,
+            //         variableWidth: true,
+            //         swipeToSlide: true
+            //     });
+            // }, 10);
 
-        //     $('.dz-message').appendTo($('.dropzone-imgages'));
+            $('.dz-message').appendTo($('#forQueue'));
 
-        // });
+        });
     </script>
 </body>
 

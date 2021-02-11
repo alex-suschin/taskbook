@@ -820,9 +820,6 @@ button.btn-fiol {
 .dropzone.dz-clickable .dz-message * {
   cursor: pointer; }
 
-.dropzone.dz-started .dz-message {
-  display: none; }
-
 .dropzone.dz-drag-hover {
   border-style: solid; }
 
@@ -830,6 +827,8 @@ button.btn-fiol {
   opacity: 0.5; }
 
 .dropzone .dz-message {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   text-align: center;
   height: 120px;
@@ -864,7 +863,10 @@ button.btn-fiol {
   display: inline-block;
   vertical-align: top;
   min-height: 100px;
-  margin: 0 7.5px; }
+  margin-right: 15px; }
+
+.dropzone .dz-preview:last-child {
+  margin-right: 0; }
 
 .dropzone .dz-preview:hover {
   z-index: 1000; }
