@@ -1857,6 +1857,8 @@ button.btn-fiol {
 .quest-items {
     max-width: 1290px;
     width: 83.432%;
+    max-width: 100%;
+    width: 82.693%;
     max-height: calc(100vh - 180px);
     margin-bottom: 24px;
 }
@@ -2007,6 +2009,8 @@ button.btn-fiol {
 
 .quest-item {
     max-width: 1274px;
+    max-width: 100%;
+    width: 98.76%;
     background: #FFFFFF;
     padding: 16px 30px 16px 30px;
     border-radius: 12px;
@@ -2069,6 +2073,8 @@ button.btn-fiol {
     font-size: 14px;
     line-height: 100%;
     color: #000000;
+    max-width: 138px;
+    width: 16%;
 }
 
 .quest-item--date {
@@ -2212,7 +2218,9 @@ span.rejected {
 /*************** SIMPLE OUTER SCROLLBAR ***************/
 
 .scrollbar-outer>.scroll-element,
-.scrollbar-outer>.scroll-element div {
+.scrollbar-outer>.scroll-element div,
+.list+.scroll-element,
+.list+.scroll-element div {
     border: none;
     margin: 0;
     padding: 0;
@@ -2220,11 +2228,13 @@ span.rejected {
     z-index: 10;
 }
 
-.scrollbar-outer>.scroll-element {
+.scrollbar-outer>.scroll-element,
+.list+.scroll-element {
     background-color: transparent;
 }
 
-.scrollbar-outer>.scroll-element div {
+.scrollbar-outer>.scroll-element div,
+.list+.scroll-element div {
     display: block;
     height: 100%;
     left: 0;
@@ -2232,35 +2242,41 @@ span.rejected {
     width: 100%;
 }
 
-.scrollbar-outer>.scroll-element.scroll-x {
+.scrollbar-outer>.scroll-element.scroll-x,
+.list+.scroll-element.scroll-x {
     bottom: 0;
     height: 12px;
     left: 0;
     width: 100%;
 }
 
-.scrollbar-outer>.scroll-element.scroll-y {
+.scrollbar-outer>.scroll-element.scroll-y,
+.list+.scroll-element.scroll-y {
     height: 100%;
     right: 0;
     top: 0;
     width: 12px;
 }
 
-.scrollbar-outer>.scroll-element.scroll-x .scroll-element_outer {
+.scrollbar-outer>.scroll-element.scroll-x .scroll-element_outer,
+.list+.scroll-element.scroll-x .scroll-element_outer {
     height: 8px;
     top: 2px;
 }
 
-.scrollbar-outer>.scroll-element.scroll-y .scroll-element_outer {
+.scrollbar-outer>.scroll-element.scroll-y .scroll-element_outer,
+.list+.scroll-element.scroll-y .scroll-element_outer {
     left: 9px;
     width: 3px;
 }
 
-.scrollbar-outer>.scroll-element .scroll-element_outer {
+.scrollbar-outer>.scroll-element .scroll-element_outer,
+.list+.scroll-element .scroll-element_outer {
     overflow: hidden;
 }
 
-.scrollbar-outer>.scroll-element .scroll-element_track {
+.scrollbar-outer>.scroll-element .scroll-element_track,
+.list+.scroll-element .scroll-element_track {
     background-color: transparent;
 }
 
@@ -3232,6 +3248,22 @@ span.rejected {
     M O B I L E
 */
 
+@media screen and (max-width: 1600px) {
+    .quest-list-aside {
+        max-width: 230px;
+        width: 100%;
+    }
+    .quest-items {
+        width: 75.693%;
+    }
+    .quest-item--person {
+        width: auto;
+    }
+    .quest-item--title {
+        width: 20%;
+    }
+}
+
 @media screen and (max-width: 1500px) {
     .quest-info__right {
         width: 55%;
@@ -3249,6 +3281,9 @@ span.rejected {
 }
 
 @media screen and (max-width: 1400px) {
+    .wrapper-quest-list .main-wrap-box {
+        padding: 21px 0 0 25px;
+    }
     .quest-setting-box {
         padding: 50px 35px 29px 35px;
     }
@@ -3258,6 +3293,19 @@ span.rejected {
     }
     .quest-setting-aside {
         padding: 0 15px 0 30px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .quest-item {
+        padding: 16px 12px 16px 12px;
+    }
+    .person-img {
+        margin-right: 10px;
+    }
+    .quest-list-aside {
+        max-width: 185px;
+        width: 100%;
     }
 }
 
@@ -3294,6 +3342,39 @@ span.rejected {
     }
     .quest-info__right {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .quest-item--person,
+    .quest-item--num,
+    .quest-item--date,
+    .quest-item--status,
+    .quest-item--title,
+    .quest-item--link a {
+        font-size: 12px;
+    }
+    .quest-list-box {
+        flex-direction: column;
+    }
+    .quest-list-aside {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .quest-items {
+        width: 100%;
+    }
+    .profile-box {
+        margin-bottom: 0;
+        padding: 22px 15px 29px 15px;
+    }
+    .btn-new-quest {
+        display: none;
+    }
+    .wrapper-quest-list .aside,
+    .wrapper-quest-list .main-wrap {
+        max-height: initial;
     }
 }
 

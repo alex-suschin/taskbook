@@ -144,8 +144,12 @@ $(function() {
 
 
 
+    jQuery('.list').scrollbar({
+        ignoreOverlay: false
+    });
+
     jQuery('.quest-items').scrollbar({
-        ignoreOverlay: true
+        ignoreOverlay: false
     });
 
     jQuery('.popup-files-box').scrollbar({
@@ -155,11 +159,11 @@ $(function() {
     });
 
     jQuery('.client-items-executor').scrollbar({
-        ignoreOverlay: true
+        ignoreOverlay: false
     });
 
     jQuery('.client-items-cleint').scrollbar({
-        ignoreOverlay: true
+        ignoreOverlay: false
     });
 
     jQuery('#forQueue').scrollbar({
