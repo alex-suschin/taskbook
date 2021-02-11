@@ -3080,6 +3080,153 @@ span.rejected {
     line-height: 140%;
 }
 
+.popup-files {
+    padding: 50px 49px 50px 49px;
+    background: linear-gradient(114.44deg, rgba(255, 255, 255, 0.85) 0.99%, rgba(255, 255, 255, 0.24) 99.58%);
+    border: 0.6px solid rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+    backdrop-filter: blur(30px);
+    border-radius: 12px;
+    max-width: 490px;
+    width: 100%;
+    .scroll-x {
+        display: none!important;
+    }
+}
+
+.popup-files-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    b {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: #818181;
+        margin-bottom: 10px;
+    }
+    span {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000000;
+    }
+    div {
+        margin-right: 27px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.popup-files-box {
+    width: 108%;
+    padding: 15px 0 0 0!important;
+    margin-bottom: 29px;
+    max-height: 290px;
+    .dz-preview {
+        position: relative;
+        margin-right: 15px;
+        margin-bottom: 18px;
+        border-radius: 6px;
+    }
+    .dz-preview::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 6px;
+        background: rgba(0, 0, 0, 0.74);
+        z-index: 10;
+    }
+    .dz-preview:nth-child(3n) {
+        margin-right: 0;
+    }
+    .dz-message {
+        display: inline-block;
+    }
+    .dz-error-mark,
+    .dz-success-mark {
+        display: none!important;
+    }
+    .dz-size {
+        display: none;
+    }
+    .dz-filename span {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        color: #FFFFFF;
+        background-color: transparent!important;
+        border: none!important;
+    }
+}
+
+.popup-files-box .dropzone .dz-message .dz-button {
+    display: none;
+}
+
+.files-btns {
+    margin-bottom: 29px;
+    display: flex;
+    justify-content: flex-start;
+    a {
+        display: block;
+        margin-right: 45px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #3C3C3C;
+    }
+    a:last-child {
+        margin-right: 0;
+    }
+}
+
+.textarea-files-box {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    button {
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 32px;
+        height: 32px;
+        background-color: #4F5DD9;
+        background-image: url(../img/arr-up.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
+
+#textarea-files {
+    min-height: 48px;
+    padding: 12px 64px 12px 24px;
+    background: #FFFFFF;
+    border: 1px solid #EDEDED;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 160%;
+    color: #000000;
+}
+
 
 /* 
     M O B I L E
@@ -3298,6 +3445,30 @@ span.rejected {
 }
 
 @media screen and (max-width: 575px) {
+    .popup-files-box {
+        width: 100%;
+    }
+    .popup-files {
+        max-width: inherit;
+        width: 91.25%;
+        padding: 36px 22px 15px 15px;
+    }
+    .files-items .files-item {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .message-right.files {
+        width: auto;
+    }
+    .message-right.files .message {
+        min-width: auto;
+        max-width: initial;
+        padding: 16px 16px 1px 16px;
+    }
+    .files-items {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
     .quest-info__right .date {
         padding: 0 12px;
     }
@@ -3380,6 +3551,25 @@ span.rejected {
     }
     .form-item-small .nice-select {
         padding: 0 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .popup-files-box {
+        width: 107%;
+    }
+    .popup-files {
+        max-width: 292px;
+        width: 100%;
+    }
+    .popup-files-top div:last-child {
+        margin-right: 0;
+    }
+    .popup-files-box .dz-preview:nth-child(3n) {
+        margin-right: 15px;
+    }
+    .popup-files-box .dz-preview:nth-child(2n) {
+        margin-right: 0;
     }
 }
 
