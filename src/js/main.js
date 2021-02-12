@@ -159,11 +159,15 @@ $(function() {
     });
 
     jQuery('.client-items-executor').scrollbar({
-        ignoreOverlay: false
+        ignoreOverlay: false,
+        autoScrollSize: true,
+        autoUpdate: true
     });
 
     jQuery('.client-items-cleint').scrollbar({
-        ignoreOverlay: false
+        ignoreOverlay: false,
+        autoScrollSize: true,
+        autoUpdate: true
     });
 
     jQuery('#forQueue').scrollbar({
@@ -245,10 +249,6 @@ $(window).on('load resize scroll', function() {
     }
 
     if (width > '700') {
-
-    }
-
-    if (width < '700') {
 
     }
 
