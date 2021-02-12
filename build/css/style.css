@@ -470,6 +470,7 @@ label {
   margin-bottom: 9px; }
 
 .form-item {
+  position: relative;
   margin-bottom: 28px; }
   .form-item input {
     background: #FAFAFA;
@@ -3023,6 +3024,40 @@ span.rejected {
 .wrapper-search .client-item,
 .wrapper-search .quest-item {
   width: 100%; }
+
+.error {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+  top: 101%;
+  background: -o-linear-gradient(309.68deg, #FFFFFF 1.25%, rgba(255, 255, 255, 0) 94.68%), rgba(255, 255, 255, 0.38);
+  background: linear-gradient(140.32deg, #FFFFFF 1.25%, rgba(255, 255, 255, 0) 94.68%), rgba(255, 255, 255, 0.38);
+  border: 1px solid #FFA588;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 6px;
+  padding: 12px 12px 12px 16px;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 100%;
+  color: #000000;
+  z-index: 999; }
+
+.error::before {
+  content: '';
+  display: block;
+  width: 19px;
+  height: 8px;
+  position: absolute;
+  top: -8px;
+  left: 11px;
+  background: url(../img/arr-error.png) no-repeat center; }
 
 /* 
     M O B I L E
