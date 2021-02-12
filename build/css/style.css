@@ -914,7 +914,7 @@ button.btn-fiol {
   font-size: 13px;
   min-width: 100%;
   max-width: 100%;
-  padding: 2em 1em;
+  padding: 11px;
   text-align: center;
   color: rgba(0, 0, 0, 0.9);
   line-height: 150%; }
@@ -924,7 +924,9 @@ button.btn-fiol {
   font-size: 16px; }
 
 .dropzone .dz-preview .dz-details .dz-filename {
-  white-space: nowrap; }
+  white-space: pre-wrap;
+  -moz-text-align-last: left;
+       text-align-last: left; }
 
 .dropzone .dz-preview .dz-details .dz-filename:hover span {
   border: 1px solid rgba(200, 200, 200, 0.8);
@@ -2883,6 +2885,8 @@ span.rejected {
     font-size: 14px;
     line-height: 100%;
     color: #000000; }
+  .popup-files-top i {
+    font-style: normal; }
   .popup-files-top div {
     margin-right: 27px;
     display: -webkit-box;
@@ -2934,7 +2938,8 @@ span.rejected {
     line-height: 100%;
     color: #FFFFFF;
     background-color: transparent !important;
-    border: none !important; }
+    border: none !important;
+    word-break: break-all; }
 
 .popup-files-box .dropzone .dz-message .dz-button {
   display: none; }
@@ -2948,6 +2953,7 @@ span.rejected {
       -ms-flex-pack: start;
           justify-content: flex-start; }
   .files-btns a {
+    position: relative;
     display: block;
     margin-right: 45px;
     font-weight: 500;
@@ -2956,6 +2962,25 @@ span.rejected {
     color: #3C3C3C; }
   .files-btns a:last-child {
     margin-right: 0; }
+
+.files-btns a:first-child i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: url(../img/black+.svg) no-repeat center;
+  margin-left: 9px; }
+
+.files-btns a:last-child i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: url(../img/black+.svg) no-repeat center;
+  margin-left: 9px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg); }
 
 .textarea-files-box {
   display: -webkit-box;

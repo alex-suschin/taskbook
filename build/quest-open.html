@@ -182,11 +182,11 @@
                                     <div class="popup-files-top">
                                         <div>
                                             <b>Прикреплено:</b>
-                                            <span>5 файлов</span>
+                                            <span><i>0</i> файлов</span>
                                         </div>
                                         <div>
                                             <b>Общий объём:</b>
-                                            <span>120 Мб</span>
+                                            <span><i>0</i> Мб</span>
                                         </div>
                                     </div>
                                     <input type="file" multiple="true" id="uploadFiles_dz" />
@@ -198,8 +198,8 @@
                                     </div>
                                     <div class="popup-files-bottom">
                                         <div class="files-btns">
-                                            <a href="javascript:void(0);">Добавить файл</a>
-                                            <a href="javascript:void(0);">Отменить</a>
+                                            <a href="javascript:void(0);">Добавить файл <i></i></a>
+                                            <a href="javascript:void(0);">Отменить<i></i></a>
                                         </div>
                                         <div class="textarea-files-box">
                                             <button type="submit"></button>
@@ -273,6 +273,7 @@
 
     </div>
 
+
     <script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>
     <script>
@@ -291,8 +292,17 @@
 
         });
 
-        myDropzone.on("addedfile", function(file) {
+        myDropzone.on("complete", function(file) {
             $('.dz-message').appendTo($('#files-drop'));
+            var imgsCol = $("#files-drop .dz-preview").length;
+            $('.popup-files-top span:first i').text(imgsCol);
+
+            $("#files-drop .dz-preview").each(function() {
+                var valFormat = $(this).children('.dz-details').children('.dz-filename').children('span').text();
+                var valFormatSplit = valFormat.split('.')[1];
+                console.log(valFormatSplit);
+                // $(this).children('.dz-details').children('.dz-filename').after('<i>valFormatSplit</i>');
+            });
 
         });
     </script>
