@@ -178,6 +178,26 @@
     z-index: -1;
 }
 
+.-weekend-+.-weekend-.-range-from-::before {
+    content: '';
+    width: 133%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    right: -22px;
+    z-index: -1;
+}
+
+.-weekend-.-range-from-+.-weekend-.-in-range-::after {
+    content: '';
+    width: 101%;
+    height: 100%;
+    background: rgba(79, 93, 217, 0.1);
+    position: absolute;
+    right: -22px;
+    z-index: -1;
+}
+
 .-weekend-.-in-range-+.-weekend-.-in-range-::after {
     content: '';
     width: 101%;
